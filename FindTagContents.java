@@ -14,7 +14,7 @@ public class FindTagContents {
 
         if(result) {
             int num = scanned.indexOf(scanned1);
-            String textUpToWord = scanned1.substring(0, num);
+            
             int startOfSentence = scanned.indexOf(">",num)+1;
             int endOfSentence = scanned.indexOf("<", num);
             
