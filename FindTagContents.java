@@ -1,3 +1,16 @@
+// BUG: for the following input:
+/* 
+<b>the</b> <span>quick</span> <b>brown</b>
+p
+ */
+// I got the following output:
+/* 
+p is present in the string.
+start of sentence is: 16
+end of sentence is: 21
+quick 
+*/
+// (I think it misinterpreted the <span> tag as a <p> tag)
 import java.util.Scanner;
 
 public class FindTagContents {
