@@ -1,3 +1,9 @@
+// BUG: running the second example caused this to happen:
+/* o is present in the string.
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 19, end 15, length 26
+        at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3319)
+        at java.base/java.lang.String.substring(String.java:1874)
+        at FindWord.main(FindWord.java:28) */
 import java.util.Scanner;
 
 public class FindWord {
