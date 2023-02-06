@@ -31,7 +31,7 @@ public class FindWord {
             //System.out.println("start of sentence is: " + startOfSentence);
             //System.out.println("end of sentence is: " + endOfSentence);
             // /DEBUG
-            String shortword = sentance.substring(startOfSentence,endOfSentence);
+            String shortword = sentance.substring(endOfSentence,startOfSentence);
             System.out.println("The word is "+shortword);
         }
         else {
