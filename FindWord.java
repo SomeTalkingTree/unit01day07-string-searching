@@ -14,16 +14,17 @@ public class FindWord {
         if(result) {
             int num = sentance.indexOf(searchTerm);
             
-            int startOfSentence = sentance.lastIndexOf(" ");
-            int endOfSentence = sentance.indexOf(" ", num);
-            if(endOfSentence== -1){
-                endOfSentence = sentance.indexOf("", num);
-            }
+            int endOfSentence = sentance.lastIndexOf(" ");
+            int startOfSentence = sentance.indexOf(" ", num);
+            //if(startOfSentence== -1){
+                //endOfSentence = sentance.indexOf("", num);
+            //}
             
             System.out.println(searchTerm + " is present in the string.");
             // DEBUG
-            //System.out.println("start of sentence is: " + startOfSentence);
-            //System.out.println("end of sentence is: " + endOfSentence);
+            System.out.println("start of sentence is: " + startOfSentence);
+            System.out.println("end of sentence is: " + endOfSentence);
+            System.out.println("sentance: " + sentance + " (has length : " + sentance.length() + ")");
             // /DEBUG
             String shortword = sentance.substring(startOfSentence,endOfSentence);
             System.out.println("The word is "+shortword);
@@ -36,4 +37,4 @@ public class FindWord {
         scanner.close();
     }
 }
-// javac FindWord.java; java FindWord
+// javac FindWord.java; cat inputtext.txt |  java FindWord
